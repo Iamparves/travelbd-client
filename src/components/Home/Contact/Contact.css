@@ -1,0 +1,10 @@
+.contact {
+    background: #F4F6FE;
+    padding: 70px 0;
+}
+
+@media screen and (max-width: 992px) {
+    .contact {
+        padding: 50px 0 30px;
+    }
+}

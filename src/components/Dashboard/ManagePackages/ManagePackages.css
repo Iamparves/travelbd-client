@@ -1,0 +1,23 @@
+.managePackages {
+    padding: 30px;
+}
+
+.managePackages__content {
+    background: #fff;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.managePackage__inner {
+    padding: 20px;
+    min-width: 600px;
+}
+
+@media screen and (max-width: 800px) {
+    .managePackages {
+        padding: 20px 15px;
+    }
+    .managePackage__inner {
+        padding: 15px;
+    }
+}

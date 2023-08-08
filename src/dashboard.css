@@ -1,0 +1,183 @@
+.dashboard {
+  background: #f4f6fe;
+  min-height: 100vh;
+}
+
+.dashboard__header {
+  background: #fff;
+  padding: 8px 20px;
+  box-shadow: 0 10px 30px #101d2c05;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #0000000d;
+}
+
+.dashboard__header .logo {
+  color: #101d2c;
+  font-family: "Lobster Two", cursive;
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+.dashboard__header .img__box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.dashboard__header .img__box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dashboard__inner {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: calc(100vh - 61px);
+}
+
+.sidebar {
+  background: #fff;
+  padding: 20px;
+}
+
+.sidebar__toggle {
+  background: #f4f6fe;
+  border: 0;
+  color: #101d2c;
+  display: inline-block;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+
+.sidebar__nav a,
+.sidebar__nav a:hover {
+  display: block;
+  padding: 10px 0;
+  color: #101d2c;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar__nav a:not(:last-child) {
+  border-bottom: 1px solid #f4f6fe;
+}
+
+.sidebar__nav a:first-child {
+  padding: 0 0 10px;
+}
+
+.sidebar__nav a.active {
+  color: #c69963;
+}
+
+.sidebar__nav a span {
+  margin-right: 5px;
+}
+
+.dashboard__content {
+  overflow-x: auto;
+}
+
+.scrollbar::-webkit-scrollbar {
+  height: 5px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #c6996333;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #c69963;
+}
+
+/* Dashboard Table */
+
+.dashboard__table {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px #f4f6fe;
+  overflow: hidden;
+}
+
+.dashboard__table thead {
+  background: #f4f6fe;
+}
+
+.dashboard__table th {
+  color: #101d2c;
+  padding: 12px 10px;
+}
+
+.dashboard__table td {
+  padding: 10px 10px;
+}
+
+.dashboard__table tbody tr {
+  background: #fff;
+}
+
+.dashboard__table tbody tr:nth-child(2n) {
+  background: #f4f6fe71;
+}
+
+.dashboard__table td .delete__btn {
+  background: #ff474d;
+  border: 0;
+  outline: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  color: #ffffffe6;
+  transition: 0.3s;
+}
+
+.dashboard__table td .delete__btn:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 1080px) {
+  .dashboard__inner {
+    grid-template-columns: 220px 1fr;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .dashboard__inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .sidebar {
+    padding: 15px 15px 0;
+  }
+  .sidebar__toggle {
+    display: flex;
+  }
+  .sidebar__nav {
+    display: none;
+  }
+  .sidebar__nav.visible {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .dashboard__header {
+    padding: 10px;
+  }
+}

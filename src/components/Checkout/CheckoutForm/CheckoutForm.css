@@ -1,0 +1,19 @@
+.creditCard label {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.creditCard label span {
+  font-weight: 600;
+  color: #101d2c;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.creditCard .StripeElement {
+  border: 2px solid #e9e9ee;
+  background: #f9f9fb;
+  padding: 13px 10px;
+  border-radius: 5px;
+}

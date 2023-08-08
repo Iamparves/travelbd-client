@@ -1,0 +1,120 @@
+.myBookings {
+    padding: 30px;
+}
+
+.myBookings__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.myBooking__card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.myBooking__header {
+    position: relative;
+    height: 220px;
+}
+
+.myBooking__header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.myBooking__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.myBooking__status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-bottom: 0;
+    padding: 8px 15px;
+    border-radius: 3px;
+    z-index: 2;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.myBooking__status.pending {
+    background: #ff4747f1;
+}
+
+.myBooking__status.going {
+    background: #FFBD3Ff1;
+}
+
+.myBooking__status.done {
+    background: #03ce62f1;
+}
+
+.myBooking__details {
+    padding: 15px;
+}
+
+.myBooking__title {
+    color: #101d2c;
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+}
+
+.myBooking__summary {
+    color: #101d2cbd;
+}
+
+.noBooking {
+    background: #fff;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.noBooking h2 {
+    color: #101d2c;
+    font-family: 'Teko', sans-serif;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1350px) {
+    .myBookings__content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .myBookings__content {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    .myBooking__card {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .myBookings {
+        padding: 25px 15px;
+    }
+    .myBooking__header {
+        height: calc(100px + 20vw);
+    }
+    .myBooking__title {
+        font-size: 26px;
+    }
+}

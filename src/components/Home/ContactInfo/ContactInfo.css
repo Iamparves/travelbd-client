@@ -1,0 +1,30 @@
+.contact__info {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.contact__info span {
+    color: #c69963;
+    font-size: 30px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.contact__info h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: #101d2c;
+}
+
+.contact__info p {
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    letter-spacing: 1px;
+    color: #101d2cce;
+    margin-bottom: 0;
+}

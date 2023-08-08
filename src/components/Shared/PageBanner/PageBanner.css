@@ -1,0 +1,20 @@
+.banner {
+    padding: 60px 0;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../../img/travel2.jpg) no-repeat center / cover;
+}
+
+.banner h1 {
+    text-align: center;
+    color: #c69963;
+    font-family: 'Niconne', cursive;
+    font-size: 60px;
+}
+
+@media screen and (max-width: 576px) {
+    .banner {
+        padding: 40px 0;
+    }
+    .banner h1 {
+        font-size: 45px;
+    }
+}

@@ -1,0 +1,96 @@
+.bookingsList {
+    padding: 30px;
+}
+
+.bookingsList__content {
+    background: #fff;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.bookingsList__inner {
+    min-width: 900px;
+    padding: 20px;
+}
+
+.bookingsList__content .dashboard__table {
+    width: 100%;
+}
+
+.bookingsList .dashboard__table td {
+    min-width: 120px;
+}
+
+.status__box {
+    position: relative;
+}
+
+.status__box button {
+    color: #FF4747;
+    background: transparent;
+    border: 0;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status__box button.going {
+    color: #FFBD3F;
+}
+
+.status__box button.done {
+    color: #03ce62;
+}
+
+.status__labels {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #101d2ce5;
+    display: none;
+    z-index: 99;
+}
+
+.status__labels.visible {
+    display: flex;
+}
+
+.status__labels label {
+    color: #fff;
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    min-width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.status__labels label:nth-child(1) {
+    background: #FF4747;
+    margin-bottom: 10px;
+}
+
+.status__labels label:nth-child(2) {
+    background: #FFBD3F;
+    margin-bottom: 10px;
+}
+
+.status__labels label:nth-child(3) {
+    background: #03ce62;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 980px) {
+    .bookingsList {
+        padding: 20px 15px;
+    }
+    .bookingsList__inner {
+        padding: 15px;
+    }
+}

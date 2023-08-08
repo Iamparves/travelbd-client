@@ -1,0 +1,31 @@
+.header {
+  background: linear-gradient(#101d2cf2, #101d2cf2), url(../../../img/travel.jpg) no-repeat center / cover fixed;
+  padding: 100px 0;
+  min-height: calc(100vh - 65px);
+}
+
+.hero {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero__title {
+  color: #c69963;
+  font-family: 'Niconne', cursive;
+  font-size: 50px;
+}
+
+.hero__subtitle {
+  font-size: 18px;
+  margin: 20px 0 30px;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 470px) {
+  .hero__title {
+      font-size: 40px;
+  }
+  .hero__subtitle {
+      font-size: 16px;
+  }
+}

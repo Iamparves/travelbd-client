@@ -1,0 +1,128 @@
+.package__card {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  position: relative;
+  transition: 0.3s;
+}
+
+.package__card:hover {
+  transform: translateY(-10px);
+  border: 1px solid transparent;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.package__header {
+  position: relative;
+}
+
+.package__img--box {
+  height: 210px;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 25px), 0 100%);
+}
+
+.package__img--box::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, #101d2cc0, #101d2cc0);
+}
+
+.package__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.package__name {
+  font-family: "Teko", sans-serif;
+  font-size: 28px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: right;
+  background: linear-gradient(to bottom right, #101d2c4d, #101d2ce0);
+  color: #fff;
+  display: inline-block;
+  border: 5px;
+  line-height: 1;
+  position: absolute;
+  padding: 10px 15px;
+  bottom: 0;
+  right: 15px;
+  border-radius: 3px;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.package__details {
+  padding: 30px 20px 110px;
+}
+
+.package__subtitle {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  color: #555;
+}
+
+.package__text {
+  font-size: 14px;
+  color: #777;
+}
+
+.package__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.package__data {
+  display: flex;
+  align-items: center;
+}
+
+.package__data .icon {
+  color: #c69963;
+  font-size: 20px;
+  width: 27px;
+}
+
+.package__data .text {
+  font-size: 13px;
+  width: calc(100% - 27px);
+}
+
+.package__footer {
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.package__price {
+  margin-bottom: 0;
+}
+
+.package__price .value {
+  color: #666;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.package__price .text {
+  color: #777;
+  font-size: 13px;
+}

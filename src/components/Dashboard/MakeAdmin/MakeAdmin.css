@@ -1,0 +1,42 @@
+.makeAdmin {
+  padding: 30px;
+}
+
+.makeAdmin__content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.makeAdmin__wrapper {
+  overflow-x: auto;
+}
+
+.makeAdmin__form {
+  margin: 0 0 40px;
+}
+
+.admin__group--box {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  grid-gap: 10px;
+}
+
+.admin__group--box button,
+.admin__group--box button:hover {
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 576px) {
+  .makeAdmin {
+    padding: 20px 15px;
+  }
+  .makeAdmin__content {
+    padding: 15px;
+  }
+  .admin__group--box {
+    grid-template-columns: 1fr;
+  }
+}

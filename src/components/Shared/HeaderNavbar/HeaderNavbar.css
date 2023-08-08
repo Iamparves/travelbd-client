@@ -1,0 +1,18 @@
+.navbar__nav {
+    background: #fff;
+    padding: 5px 10px;
+    box-shadow: 0 10px 30px #101d2c14;
+}
+
+.navbar__nav .navbar-brand {
+    font-family: 'Lobster Two', cursive;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.navbar__nav .nav-link {
+    color: #101d2c !important;
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 5px;
+}
