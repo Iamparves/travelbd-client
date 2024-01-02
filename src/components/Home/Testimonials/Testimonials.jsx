@@ -50,9 +50,9 @@ const Testimonials = () => {
           <h2>Testimonials</h2>
         </div>
         <div className="testimonial__slider">
-          {!loading && testimonials.length > 0 && (
+          {!loading && testimonials?.length > 0 && (
             <Swiper {...swiperSettings}>
-              {testimonials.map((testimonial) => (
+              {testimonials?.map((testimonial) => (
                 <SwiperSlide key={testimonial._id}>
                   <TestimonialCard testimonial={testimonial} />
                 </SwiperSlide>

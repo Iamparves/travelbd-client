@@ -81,10 +81,10 @@ const Testimonial = () => {
           </button>
         </form>
       </div>
-      {testimonials.length > 0 && (
+      {testimonials?.length > 0 && (
         <div className="testimonial__cards">
           <h2 className="title">My Testimonials</h2>
-          {testimonials.map((testimonial) => (
+          {testimonials?.map((testimonial) => (
             <div className="testimonialCard" key={testimonial._id}>
               <h2 className="name">{testimonial.name}</h2>
               <p className="description">{testimonial.description}</p>

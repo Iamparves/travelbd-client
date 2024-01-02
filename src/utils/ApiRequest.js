@@ -1,5 +1,4 @@
-const base = "http://localhost:5000";
-// const base = "https://travelbd.onrender.com";
+const base = "https://travelbd.onrender.com";
 
 export const getAdmins = async () => {
   try {
@@ -145,7 +144,7 @@ export const getUserRole = async (email) => {
     const res = await fetch(`${base}/getAdmin?email=${email}`);
     const admin = await res.json();
 
-    return admin.length > 0;
+    return admin?.length > 0;
   } catch (err) {
     console.log(err);
   }
