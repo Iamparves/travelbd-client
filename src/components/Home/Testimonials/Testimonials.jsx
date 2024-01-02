@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { getTestimonials } from "../../../utils/ApiRequest";
 import TestimonialCard from "../TestimonialCard/TestimonialCard";
 import "./Testimonials.css";
+import Spinner from "/img/spinner.svg";
 
 const swiperSettings = {
   modules: [Pagination],
@@ -30,10 +31,15 @@ const swiperSettings = {
 };
 
 const Testimonials = () => {
+  const [loading, setLoading] = useState(false);
   const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
-    getTestimonials().then((data) => setTestimonials(data));
+    setLoading(true);
+    getTestimonials().then((data) => {
+      setTestimonials(data);
+      setLoading(false);
+    });
   }, []);
 
   return (
@@ -44,7 +50,7 @@ const Testimonials = () => {
           <h2>Testimonials</h2>
         </div>
         <div className="testimonial__slider">
-          {testimonials.length > 0 && (
+          {!loading && testimonials.length > 0 && (
             <Swiper {...swiperSettings}>
               {testimonials.map((testimonial) => (
                 <SwiperSlide key={testimonial._id}>
@@ -54,6 +60,26 @@ const Testimonials = () => {
             </Swiper>
           )}
         </div>
+        {loading && (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <img
+              width={50}
+              style={{
+                display: "block",
+                marginBottom: 20,
+              }}
+              src={Spinner}
+              alt="spinner"
+            />
+            <p>Loading Testimonials...</p>
+          </div>
+        )}
       </Container>
     </section>
   );

@@ -5,12 +5,18 @@ import Footer from "../components/Shared/Footer/Footer";
 import HeaderNavbar from "../components/Shared/HeaderNavbar/HeaderNavbar";
 import PageBanner from "../components/Shared/PageBanner/PageBanner";
 import { getPackages } from "../utils/ApiRequest";
+import Spinner from "/img/spinner.svg";
 
 const Packages = () => {
+  const [loading, setLoading] = useState(false);
   const [packages, setPackages] = useState([]);
 
   useEffect(() => {
-    getPackages().then((data) => setPackages(data));
+    setLoading(true);
+    getPackages().then((data) => {
+      setPackages(data);
+      setLoading(false);
+    });
   }, []);
 
   return (
@@ -20,10 +26,31 @@ const Packages = () => {
         <PageBanner name="Packages" />
         <Container>
           <div className="package packagesPage__content">
-            {packages?.map((tourPackage) => (
-              <PackageCard tourPackage={tourPackage} key={tourPackage._id} />
-            ))}
+            {!loading &&
+              packages?.map((tourPackage) => (
+                <PackageCard tourPackage={tourPackage} key={tourPackage._id} />
+              ))}
           </div>
+          {loading && (
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <img
+                width={50}
+                style={{
+                  display: "block",
+                  marginBottom: 20,
+                }}
+                src={Spinner}
+                alt="spinner"
+              />
+              <p>Loading Packages...</p>
+            </div>
+          )}
         </Container>
       </section>
       <Footer />

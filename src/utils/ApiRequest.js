@@ -1,4 +1,5 @@
-const base = "https://travelbd.onrender.com";
+const base = "http://localhost:5000";
+// const base = "https://travelbd.onrender.com";
 
 export const getAdmins = async () => {
   try {
